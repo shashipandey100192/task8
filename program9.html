@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>00:00:00</h1>
+    <h1>current time</h1>
+
+    <input type="button" value="submit" disabled>
+
+
+    <script>
+        function abc() {
+            var mytime = new Date();
+            var h = mytime.getHours();
+            var m = mytime.getMinutes();
+            var s = mytime.getSeconds();
+            var jsheading = document.querySelectorAll("h1");
+            jsheading[0].innerHTML = `${h}:${m}:${s}`;
+
+
+            var jsbtn = document.querySelector("input");
+
+            if (h == 11 && m == 58 && s >= 11) {
+                jsbtn.removeAttribute("disabled");
+            }
+            else {
+                jsbtn.setAttribute("disabled", "disabled");
+            }
+
+
+            jsbtn.addEventListener("click", () => {
+                var a = new Date();
+                jsheading[1].innerHTML = `submit time: ${a.getHours()}:${a.getMinutes()}:${a.getSeconds()}`;
+
+            });
+
+
+
+            if (h == 12 && m >= 9) {
+                // setTimeout("xyz()",0);
+                // xyz();
+            }
+        }
+
+        setInterval("abc()", 1000);
+
+        function xyz() {
+            alert("this is popup model");
+        }
+
+        setTimeout("xyz()", 5000);
+
+    </script>
+
+</body>
+
+</html>
