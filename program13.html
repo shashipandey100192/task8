@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+    </style>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .myform {
+            width: 300px;
+            height: auto;
+            border: 1px solid blue;
+            list-style-type: none;
+            padding: 10px;
+        }
+
+        .myform input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-top: 8px;
+        }
+
+        .myform li {
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
+
+        #mycap input {
+            width: 40px;
+        }
+
+        .myform p {
+            color: red;
+            display: none;
+        }
+
+        #discap {
+            font-size: 30px;
+            letter-spacing: 11px;
+            padding-left: 17px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="myform">
+        <li>
+            <input type="email" placeholder="email" id="user">
+            <p>invalid emailid</p>
+        </li>
+        <li>
+            <input type="password" placeholder="password" id="pass">
+            <p>invalid password</p>
+        </li>
+        <li> Captch: <span id="discap">42516</span></li>
+        <li>
+            <div id="mycap">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <span id="icons">
+                </span>
+            </div>
+        </li>
+        <li> <input type="button" value="login" onclick="formvalidation()"></li>
+    </ul>
+
+    <script src="program13.js"></script>
+</body>
+
+</html>
