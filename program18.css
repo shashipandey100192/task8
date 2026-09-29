@@ -1,0 +1,26 @@
+*{
+    margin:0 auto;
+    padding:0;
+}
+
+.mytemplate
+{
+    width:1200px;
+    height: fit-content;
+    border:1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.mytemplate>section
+{
+    width:227px;
+    min-height: 100px;
+    max-height: fit-content;
+    border:1px solid green;
+    margin: 5px;
+    background:linear-gradient(orange,rgb(255, 201, 102));
+    text-align: center;
+    padding:10px;
+    box-sizing: border-box;
+}
